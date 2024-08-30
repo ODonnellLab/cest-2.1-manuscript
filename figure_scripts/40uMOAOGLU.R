@@ -18,7 +18,7 @@ plotColors <- source(file = 'parameters/plotColors.R')
 
 
 # Filter data to specific date and conditions
-filter_date <- c( "2024-08-29")
+filter_date <- c( "2024-08-30" )
 filtered_data <- merged_data %>%
   filter(Date %in% filter_date,
          Condition %in% c("OA", "oglu", "control"),
@@ -49,7 +49,7 @@ OATA<-ggplot(filtered_data, aes(x = Condition, y = Response.time)) +
   labs(y = "Time(sec)")
 
 # Save the plot as a PDF file
-pdf(file = "/Users/tiabrown/Documents/git/cest-2.1-Project/figures/40uMOAOglu.pdf", width = 8, height = 6)
+pdf(file = "/Users/tiabrown/Documents/git/cest-2.1-Project/figures/40uMOAOglu1day.pdf", width = 8, height = 6)
 
 # Print graph
 print(OATA)
